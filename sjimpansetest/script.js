@@ -38,9 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
         fortsettKnapp.style.display = "none";
     }
 
-    // Function to generate grid items
     function genererGridRuter(count) {
-        gridContainer.innerHTML = ""; // Clear existing items
+        gridContainer.innerHTML = "";
         tallSkjult = false;
         nåværendeTall = 1;
         skjulTekst();
@@ -106,13 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
         proevIgjenKnapp.style.display = "none";
         lagreKnapp.style.display = "none";
     });
-
-   /* lagreKnapp.addEventListener("click", () => {
-        if (liv = 0) {
-            
-        }
-    }); */
-
+    
     document.getElementById("sjimpanseStartKnapp").addEventListener("click", () => {
         genererGridRuter(nåværendeNivå);
         document.getElementById("sjimpanseStart").style.display = "none";

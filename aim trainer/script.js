@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", function() {
         const tilfeldigX = Math.floor(Math.random() * maxX);
         const tilfeldigY = Math.floor(Math.random() * maxY);
     
-        bilde.style.left = `${tilfeldigX}px`; // Oppdaterer left-posisjon
-        bilde.style.top = `${tilfeldigY}px`; // Oppdaterer top-posisjon
+        bilde.style.left = `${tilfeldigX}px`;
+        bilde.style.top = `${tilfeldigY}px`;
     }    
     
     function oppdaterTeller() {
@@ -84,5 +84,4 @@ document.addEventListener("DOMContentLoaded", function() {
     bilde.addEventListener("click", håndterKlikk);
 
     prøvIgjenKnapp.addEventListener("click", tilbakestillSpill);
-    // lagreKnapp trenger ikke funksjonalitet ennå
 });
