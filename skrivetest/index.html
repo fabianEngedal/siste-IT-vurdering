@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skrivetest</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+  <nav>
+    <ul>
+        <li id="humanBenchmark"><a href="../index.html">Human benchmark</a></li>
+        <li id="score"><a href="../score/index.html">Score</a></li>
+        <li id="toppListe"><a href="../toppliste/index.html">Toppliste</a></li>
+    </ul>
+  </nav>
+  <div id="skriveTestContainer">
+    <div id="spillSeksjon">
+        <h1>Skrivetest</h1>
+        <div id="avsnitt">
+            <p id="paragraf"></p>
+        </div>
+      <textarea id="skrivefelt" placeholder="Skriv her..."></textarea>
+    </div>
+      <p id="skriveTestResultat">Din WPM: 0</p>
+      <div id="resultatSeksjon" class="skjult">
+        <p class="brødTekst">Prøv igjen eller lagre resultater</p>
+        <button class="knapp" id="skriveProevIgjen">Prøv igjen</button>
+        <button class="knapp" id="skriveLagre">Lagre resultat</button>
+    </div>
+    </div>
+  </div>
+</body>
+</html>
