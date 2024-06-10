@@ -20,7 +20,7 @@ const avsnitt = document.getElementById("avsnitt").innerText;
 let startTid;
 let intervall;
 
-skrivefelt.addEventListener("input", function() {
+skrivefelt.addEventListener("input", () => {
     if (!startTid) {
         startTid = new Date().getTime();
         intervall = setInterval(oppdaterWPM, 800);
@@ -40,7 +40,7 @@ function oppdaterWPM() {
     const antallOrd = tekstSkrevet.split(" ").filter(ord => ord.length > 0).length;
     const wpm = (antallOrd / tidBrukt) * 60;
 
-    resultat.innerText = `Din WPM: ${Math.round(wpm)}`;
+    resultat.innerText = `WPM: ${Math.round(wpm)}`;
 }
 
 function visSluttWPM() {
@@ -49,8 +49,8 @@ function visSluttWPM() {
     const antallOrd = avsnitt.split(" ").length;
     const wpm = (antallOrd / tidBrukt) * 60;
 
-    document.getElementById("spillSeksjon").classList.add("skjult")
-    document.getElementById("resultatSeksjon").classList.remove("skjult")
+    document.getElementById("spillSeksjon").classList.add("skjult");
+    document.getElementById("resultatSeksjon").classList.remove("skjult");
     resultat.innerText = `Endelige WPM: ${Math.round(wpm)}`;
 }
 
@@ -59,7 +59,7 @@ document.getElementById("skriveProevIgjen").addEventListener("click", () => {
     clearInterval(intervall);
     skrivefelt.value = "";
     skrivefelt.disabled = false;
-    resultat.innerText = "Din WPM: 0";
+    resultat.innerText = "WPM: 0";
     paragraf.innerHTML = paragrafArray[(Math.floor(Math.random() * paragrafArray.length))];
     document.getElementById("spillSeksjon").classList.remove("skjult")
     document.getElementById("resultatSeksjon").classList.add("skjult")
