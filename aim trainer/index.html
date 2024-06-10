@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tilfeldig bildeposisjon</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li id="humanBenchmark"><a href="../index.html">Human benchmark</a></li>
+            <li id="score"><a href="../score/index.html">Score</a></li>
+            <li id="toppListe"><a href="../toppliste/index.html">Toppliste</a></li>
+        </ul>
+    </nav>
+    <div id="aimTrainerBakgrunn"></div>
+    <div id="aimTrainerContainer">
+        <h1 class="overskrift" id="aimTrainerOverskrift">Aim trainer</h1>
+        <img id="aimTrainerBlink" src="../bilder/blink.svg">
+        <p class="brødTekst" id="aimTrainerTekst">Trykk på målet 30 ganger så kjapt du kan.</p>
+        <div class="skjult" id="aimTrainerResultater">
+            <p class="brødTekst">Gjennomsnittlig tid per klikk</p>
+            <p class="brødTekst" id="aimTrainerTid"></p>
+            <p>Prøv på nytt eller lagre resultater</p>
+            <div id="aimTrainerKnapper">
+                <button class="knapp" id="aimTrainerProevIgjen">Prøv igjen</button>
+                <button class="knapp" id="aimTrainerLagre">Lagre resultat</button>
+            </div>
+        </div>
+    </div>
+    <h3 id="aimTrainerTeller">Klikk igjen: 30</h3>
+    <script src="script.js"></script>
+</body>
+</html>
