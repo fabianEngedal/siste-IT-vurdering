@@ -1,0 +1,451 @@
+:root {
+    --hvit: rgb(255, 255, 255);
+    --graa: #e6e8f4;
+    --blaa: rgb(43, 135, 209);
+    --groenn: rgb(75, 219, 106);
+    --roed: rgb(206, 38, 54);
+  }
+
+body {
+    background-color:var(--graa);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    bottom: 732px;
+    background-color: var(--hvit);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+li > a, #begynnTest > a, .spill {
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+    margin: -40px 50px;
+    padding: 40px 0px 20px 20px;
+}
+
+li {
+    float: left;
+    padding: 10px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 3vh;
+}
+
+li:hover {
+    background-color: var(--graa);
+}
+
+#begynnTest {
+    height: 530px;
+    margin: 48px -10px auto -10px;
+    background-color: var(--blaa);
+    text-align: center;
+    color: var(--hvit);
+}
+
+.overskriftBilde {
+    height: 150px;
+    width: fit-content;
+    margin-top: 70px;
+}
+
+.overskrift {
+    margin: auto;
+    font-size: 11vh;
+}
+
+h1 {
+    font-weight: normal;
+}
+.brødTekst {
+    font-size: 3vh;
+}
+
+.knapp {
+    margin: 15px auto;
+    padding: 12px 30px;
+    background-color: rgb(255, 209, 84);
+    border: none;
+    border-radius: 3px;
+    font-size: 3vh;
+    cursor: pointer;
+}
+
+#begynnTestKnapp {
+    cursor: pointer;
+}
+
+/* SPILL */
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+    margin: 80px auto;
+    width: 900px;
+    height: 600px;
+}
+
+.spill {
+    background-color: var(--hvit);
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    place-self: center;
+}
+
+.spill > h3 {
+    font-size: 28px;
+    margin: 70px 0px 40px 0px;
+
+}
+
+.spill > p {
+    font-size: 19px;
+    margin: 30px;
+
+}
+/* REAKSJONSTEST */
+
+#reaksjonstestBoks {
+    height: 530px;
+    margin: 48px -10px auto -10px;
+    background-color: var(--blaa);
+    text-align: center;
+    color: var(--hvit);
+    cursor: pointer;
+}
+
+#reaksjonstestOverskrift {
+    padding-top: 220px;
+}
+
+
+/* AIM TRAINER */
+
+#aimTrainerBakgrunn{
+    height: 530px;
+    margin: 48px -10px auto -10px;
+    background-color: var(--blaa);
+    text-align: center; 
+}
+
+#aimTrainerContainer{
+    width: 900px;
+    height: 480px;
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50px;
+    left: 250px;
+    color: var(--hvit);
+}
+
+#aimTrainerBlink {
+    max-width: 10%;
+    cursor: pointer;
+    position: absolute;
+    transition: left 0.1s ease, top 0.1s ease;
+    top: 180px;
+    left: 410px;
+}
+
+#aimTrainerOverskrift {
+    position: absolute;
+    top: 40px;
+
+}
+
+#aimTrainerTekst {
+    position: absolute;
+    top: 320px;
+}
+
+#aimTrainerTeller {
+    width: 250px;
+    margin: 20px auto;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: var(--hvit);
+    padding: 30px;
+    border-radius: 5px;
+}
+
+#aimTrainerResultater {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.skjult {
+    display: none;
+}
+
+#gjennomsnittlig-tid {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+#aimTrainerKnapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* TALLHUKOMMELSE */
+
+#tallContainer {
+    display: flex;
+    flex-direction: column;
+    height: 530px;
+    margin: 48px -10px auto -10px;
+    background-color: var(--blaa);
+    text-align: center;
+    color: var(--hvit);
+}
+
+#tallOverskrift {
+    margin: 220px auto 0px;
+}
+
+#tallTilfeldigTall {
+    font-size: 3em;
+    margin-top: 190px;
+}
+
+#progresjonsBarContainer {
+    width: 300px;
+    background-color: #e0e0e0;
+    margin: 20px auto;
+}
+
+#progresjonsBar {
+    width: 100%;
+    height: 20px;
+    background-color: rgb(255, 209, 84);
+    transition: width 3s linear;
+}
+
+#tallSvarSeksjon {
+    margin: 190px auto;
+}
+
+#tallSvarSeksjon > h3 {
+    font-size: 40px;
+    font-weight: normal;
+}
+
+#tallBrukerInput {
+    margin: 80px auto 10px;
+    padding: 12px 30px;
+    border: black solid 1px;
+    border-radius: 3px;
+    font-size: 3vh;
+    cursor: pointer;
+}
+
+#tallResultatSeksjon {
+    margin: 100px auto;
+}
+
+#tallResultatSeksjon * {
+    margin: 30px;
+    font-size: 26px;
+    font-weight: normal;
+}
+
+/* ORDHUKOMMELSE */
+
+#ordContainer {
+    display: flex;
+    flex-direction: column;
+    height: 530px;
+    margin: 48px -10px auto -10px;
+    background-color: var(--blaa);
+    text-align: center;
+    color: var(--hvit);
+}
+
+#ordOverskrift {
+    margin: 220px auto 0px;
+}
+
+#ordSpillSeksjon {
+    margin: 150px auto 0px;
+    text-align: center;
+}
+
+#ordSpillSeksjon > p {
+    margin: 40px;
+    font-size: 26px;
+}
+
+#ordResultatSeksjon {
+    margin: 200px auto 0px;
+    text-align: center;
+}
+
+#ordResultatSeksjon * {
+    margin: 20px auto;
+}
+
+/* SJIMPANSETEST */
+
+.sjimpanseMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#sjimpanseBakgrunn{
+    height: 530px;
+    margin: 48px -10px auto -10px;
+    background-color: var(--blaa);
+    text-align: center; 
+}
+
+.sjimpanseContainer {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 5px;
+    width: 80%;
+    max-width: 700px;
+    aspect-ratio: 8 / 5;
+    position: absolute;
+    top: 100px;
+    left: 310px;
+}
+
+.gridElm {
+    border: 5px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vh;
+    color: white;
+    border-radius: 5px;
+}
+
+.gridElm:hover {
+    border-color: var(--hvit);
+}
+
+#sjimpanseContainerTekst {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: none;
+    color: var(--hvit);
+}
+
+#sjimpanseTekst {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#sjimpanseStart {
+    width: max-content;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    top: 200px;
+    left: 400px;
+    color: var(--hvit);
+}
+
+.gjemt {
+    visibility: hidden;
+}
+
+/* SKRIVETEST */
+
+#skriveTestContainer {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 530px;
+    margin: 48px -10px auto -10px;
+    background-color: var(--blaa);
+  }
+  
+  #spillSeksjon {
+    text-align: center;
+    background: var(--hvit);
+    margin: auto 200px;
+    padding: 20px;
+    font-size: 22px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #skrivefelt {
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  
+  #skriveTestResultat {
+    margin: 10px auto;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: var(--hvit);
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+/* SCORE */
+
+#oversiktTester {
+    width: 900px;
+    height: 600px;
+    background-color: var(--hvit);
+    margin: 100px auto;
+    padding: 50px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+th, tr{
+    font-size: 3vh;
+    padding: 5px 95px;
+}
+
+tr {
+    height: 60px;
+    
+}
+tr:nth-child(even) {background-color: rgb(248, 248, 248);}
