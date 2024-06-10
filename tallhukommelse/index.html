@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intellektuelt Spill</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li id="humanBenchmark"><a href="../index.html">Human benchmark</a></li>
+            <li id="score"><a href="../score/index.html">Score</a></li>
+            <li id="toppListe"><a href="../toppliste/index.html">Toppliste</a></li>
+        </ul>
+    </nav>
+    <div id="tallBakgrunn"></div>
+    <div id="tallContainer">
+        <h1 class="overskrift" id="tallOverskrift">Tallhukommelse</h1>
+        <p class="brødTekst" id="tallTekst">Trykk på startknappen for å begynne</p>
+        <button id="tallStartKnapp" class="knapp">Start</button>
+        <div id="tallTilfeldigTall" class="skjult"></div>
+        <div id="progresjonsBarContainer" class="skjult">
+            <div id="progresjonsBar"></div>
+        </div>
+        <div id="tallSvarSeksjon" class="skjult">
+            <h3>Hva var tallet?</h3>
+            <input type="text" id="tallBrukerInput" />
+            <button class="knapp" id="tallSjekkKnapp">Sjekk</button>
+        </div>
+        <div id="tallResultatSeksjon" class="skjult">
+            <h3>Ditt svar: <p id="tallBrukerSvar"></p></h3>
+            <h3>Riktig svar: <p id="tallRiktigSvar"></p></h3>
+            <button id="tallFortsettKnapp" class="knapp skjult">Fortsett</button>
+            <button id="tallProevIgjenKnapp" class="knapp skjult">Prøv igjen</button>
+            <button id="tallLagreKnapp" class="knapp skjult">Lagre</button>
+        </div>
+    </div>
+</body>
+</html>
