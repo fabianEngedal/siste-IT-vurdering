@@ -43,9 +43,7 @@ document.getElementById("nyttOrd").addEventListener("click", () => {
         }
         nyttOrd();
     } else {
-        resultat.innerHTML = `Du klarte ${score} ord`;
-        resultatSeksjon.classList.remove("skjult");
-        spillSeksjon.classList.add("skjult");
+        visResultat();
     }
 })
 
@@ -60,9 +58,7 @@ document.getElementById("settOrd").addEventListener("click", () => {
         }
         nyttOrd();
     } else {
-        resultat.innerHTML = `Du klarte ${score} ord`;
-        resultatSeksjon.classList.remove("skjult");
-        spillSeksjon.classList.add("skjult");
+        visResultat();
     }
 })
 
@@ -76,5 +72,10 @@ document.getElementById("ordProevIgjen").addEventListener("click", () => {
     scoreContainer.textContent = "Score: " + score;
     spillSeksjon.classList.remove("skjult")
     resultatSeksjon.classList.add("skjult");
-    console.log(Hei)
 })
+
+function visResultat() {
+    resultat.innerHTML = `Du klarte ${score} ord`;
+    resultatSeksjon.classList.remove("skjult");
+    spillSeksjon.classList.add("skjult");
+}
