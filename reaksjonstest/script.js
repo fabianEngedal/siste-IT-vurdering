@@ -31,7 +31,7 @@ function startTest() {
 function iTesten() {
     if (!fargeEndret) {
         clearTimeout(tidRødTilGrønnID);
-        reaksjonstestOverskrift.innerHTML = "JUKS! Vent til bakgrunnen skifter farge";
+        reaksjonstestOverskrift.innerHTML = "Vent til bakgrunnen skifter farge";
         reaksjonstestTekst.innerHTML = "Trykk for å prøve igjen";
         reaksjonstestBoks.style.backgroundColor = "grey";
         aktivtSpill = false;
