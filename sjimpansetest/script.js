@@ -11,19 +11,19 @@ document.addEventListener('DOMContentLoaded', () => {
     let liv = 3;
     let tallSkjult = false;
 
-    function lagTilfeldigUnikIndeks(count, max) {
-        const indices = new Set();
-        while (indices.size < count) {
-            const randomIndex = Math.floor(Math.random() * max);
-            indices.add(randomIndex);
+    function lagTilfeldigUnikIndeks(antall, maks) {
+        const indekser = new Set();
+        while (indekser.size < antall) {
+            const tilfeldigIndeks = Math.floor(Math.random() * maks);
+            indekser.add(tilfeldigIndeks);
         }
-        return Array.from(indices);
+        return Array.from(indekser);
     }
 
-    function getGridPosition(index) {
-        const row = Math.floor(index / 8) + 1;
-        const col = (index % 8) + 1;
-        return { row, col };
+    function skaffGridPosisjon(indeks) {
+        const rad = Math.floor(indeks / 8) + 1;
+        const kolonne = (indeks % 8) + 1;
+        return { row: rad, col: kolonne };
     }
 
     function visTekst(tekst) {
@@ -38,20 +38,20 @@ document.addEventListener('DOMContentLoaded', () => {
         fortsettKnapp.style.display = "none";
     }
 
-    function genererGridRuter(count) {
+    function genererGridRuter(antall) {
         gridContainer.innerHTML = "";
         tallSkjult = false;
         nåværendeTall = 1;
         skjulTekst();
 
-        const tilfeldigIndekser = lagTilfeldigUnikIndeks(count, 40);
+        const tilfeldigIndekser = lagTilfeldigUnikIndeks(antall, 40);
 
-        tilfeldigIndekser.forEach((index, i) => {
+        tilfeldigIndekser.forEach((indeks, i) => {
             const gridRute = document.createElement("div");
             gridRute.classList.add("gridElm");
             gridRute.textContent = i + 1;
 
-            const { row, col } = getGridPosition(index);
+            const { row, col } = skaffGridPosisjon(indeks);
             gridRute.style.gridRowStart = row;
             gridRute.style.gridColumnStart = col;
 
@@ -59,15 +59,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (!tallSkjult && nåværendeTall === 1) {
                     document.querySelectorAll(".gridElm").forEach(item => {
                         item.textContent = "";
-                        item.style.backgroundColor = "var(--hvit)"
-                        item.style.borderColor = "var(--hvit)"
+                        item.style.backgroundColor = "var(--hvit)";
+                        item.style.borderColor = "var(--hvit)";
                     });
                     tallSkjult = true;
                 }
                 if (i + 1 === nåværendeTall) {
                     gridRute.style.visibility = "hidden";
                     nåværendeTall++;
-                    if (nåværendeTall > count) {
+                    if (nåværendeTall > antall) {
                         nåværendeNivå++;
                         genererGridRuter(nåværendeNivå);
                     }
@@ -93,9 +93,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     fortsettKnapp.addEventListener("click", () => {
-        if (liv > 0) {
-            genererGridRuter(nåværendeNivå);
-        }
+        genererGridRuter(nåværendeNivå);
+
     });
 
     proevIgjenKnapp.addEventListener("click", () => {

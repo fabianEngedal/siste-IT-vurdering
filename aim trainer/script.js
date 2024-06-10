@@ -28,10 +28,8 @@ document.addEventListener("DOMContentLoaded", function() {
     function oppdaterTeller() {
         const nåværendeTid = new Date().getTime();
         
-        if (sisteKlikkTid !== null) {
-            const tidSidenSisteKlikk = nåværendeTid - sisteKlikkTid;
-            klikkTider.push(tidSidenSisteKlikk);
-        }
+        const tidSidenSisteKlikk = nåværendeTid - sisteKlikkTid;
+        klikkTider.push(tidSidenSisteKlikk);
 
         sisteKlikkTid = nåværendeTid;
 
